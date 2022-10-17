@@ -22,7 +22,7 @@ def desayunos(request):
     return render(request, "desayunos.html")
 
 def guia_alimentacion(request):
-    return render(request, "guiadealemientacion.html")
+    return render(request, "guiaalimentacion.html")
 
 def postres(request):
     return render(request,"postres.html")
