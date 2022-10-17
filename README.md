@@ -6,6 +6,10 @@ una vez clonado el respositorio necesitamos crear un entorno virtual para instal
 sin entorno virtual django no funciona
 
 en la terminal escribimos.
+instalamos una libreria para instalacion de entorno virtual
+
+pip install pipenv
+creamos y activamos el entorno virtual
 
 pipenv shell
 
