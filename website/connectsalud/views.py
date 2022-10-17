@@ -30,4 +30,9 @@ def postres(request):
 def recetas(request):
     return render(request,"recetas.html")
 
+def sigin(request):
+    return render(request,"sigin.html")
+
+def usuario(request):
+    return render(request,"usuario.html")
 
