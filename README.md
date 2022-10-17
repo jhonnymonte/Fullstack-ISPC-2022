@@ -14,6 +14,10 @@ creamos y activamos el entorno virtual
 pipenv shell
 
 una vez creado el entorno virtual 
+-----------------------------------------------------------------
+si creamos el entorno virtual con virtual env la activacion del entorno es:
+
+source env/scripts/activate
 
 ejecutamos 
 
