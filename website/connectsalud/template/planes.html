@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang="es">
     <head>
+        {% load static %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <title>ISPC | Connect Salud</title>
 
         <!--====== Icono Favicon ======-->
-        <link href="./assets/img/connect_salud.ico" rel="shortcut icon" type="image/ico"/>
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="./assets/css/headers.css" rel="stylesheet">
-        <link href="./assets/css/features.css" rel="stylesheet">
-        <link href="./assets/css/style.css" rel="stylesheet" >
-        <link href="./assets/css/pricing.css" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/headers.css' %}" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/features.css' %}" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/style.css' %}" rel="stylesheet" >
+        <link href="{% static 'connectsalud/css/pricing.css' %}" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/recetas.css' %}" rel="stylesheet">
     </head>
 
     <body>
