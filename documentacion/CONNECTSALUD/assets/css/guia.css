@@ -1,0 +1,53 @@
+.guiaAlimentacion{
+    text-align: center;
+    color:darkgreen;
+    
+    
+}
+.fotoGuia{
+    width: 85%;
+    height: 70%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 5px #017907;
+}
+.items{
+    font-size: 20px;
+    margin: 10px;
+    line-height: 2.5;
+    word-spacing: 5px;
+    
+    
+
+}
+#titulosAlimentos{
+    text-align: center;
+    text-shadow: 0 0 3px #308858;
+    
+}
+.listaConsejos{
+    
+    
+    margin: 50px;
+    box-shadow: 5px 6px 6px 5px #396d32;
+    border-radius: 10px;
+    
+}
+#botonReceta{
+    width: 60%;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+    background-color: #3f9e1a;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(163, 163, 160);
+    
+}
+#link{
+    text-decoration: none;
+    color: black;
+}
