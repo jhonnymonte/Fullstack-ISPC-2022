@@ -13,5 +13,8 @@ urlpatterns = [
     path('recetas/', views.recetas, name= 'recetas'),
     path('sigin/', views.sigin, name= 'sigin'),
     path('usuario/', views.usuario, name= 'usuario'),
-    path('planes/', views.planes, name= 'planes')
+    path('planes/', views.planes, name= 'planes'),
+    path ('leerregistros' , views.leerregistros , name="leerregistros"),
+    path ('eliminarRegistro/<registros_nombre>/' , views.eliminarRegistro , name="eliminarRegistro"),
+    path ('editarRegistro/<registros_nombre>/' , views.editarRegistro , name="editarRegistro")
 ]
