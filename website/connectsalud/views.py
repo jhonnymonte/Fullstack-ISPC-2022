@@ -36,3 +36,6 @@ def sigin(request):
 def usuario(request):
     return render(request,"usuario.html")
 
+def planes(request):
+    return render(request,"planes.html")
+

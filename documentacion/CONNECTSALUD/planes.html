@@ -1,28 +1,18 @@
 <!doctype html>
 <html lang="es">
     <head>
-        {% load static %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <title>ISPC | Connect Salud</title>
 
         <!--====== Icono Favicon ======-->
-<<<<<<< HEAD
-        <link href="{% static 'connectsalud/assets/img/connect_salud.ico' %}" rel="shortcut icon" type="image/ico"/>
-        <link href="{% static 'connectsalud/css/bootstrap.min.css' %}" rel="stylesheet">
-        <link href="{% static 'connectsalud/salud/css/headers.css' %}" rel="stylesheet">
-        <link href="{% static 'connectsalud/css/features.css' %}" rel="stylesheet">
-        <link href="{% static 'connectsalud/css/style.css' %}" rel="stylesheet" >
-        <link href="{% static 'connectsalud/css/pricing.css' %}" rel="stylesheet">
-=======
-        <link href="{% static 'connectsalud/css/bootstrap.min.css' %}" rel="stylesheet">
-        <link href="{% static 'connectsalud/css/headers.css' %}" rel="stylesheet">
-        <link href="{% static 'connectsalud/css/features.css' %}" rel="stylesheet">
-        <link href="{% static 'connectsalud/css/style.css' %}" rel="stylesheet" >
-        <link href="{% static 'connectsalud/css/pricing.css' %}" rel="stylesheet">
-        <link href="{% static 'connectsalud/css/recetas.css' %}" rel="stylesheet">
->>>>>>> 6a63e6499bf4e76a1eb60897a88dd31ea3d52bb8
+        <link href="./assets/img/connect_salud.ico" rel="shortcut icon" type="image/ico"/>
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/headers.css" rel="stylesheet">
+        <link href="./assets/css/features.css" rel="stylesheet">
+        <link href="./assets/css/style.css" rel="stylesheet" >
+        <link href="./assets/css/pricing.css" rel="stylesheet">
     </head>
 
     <body>
@@ -32,13 +22,13 @@
         <section class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <a href="#" class="d-flex">
-                <img src="{% static 'connectsalud/assets/img/connect_salud.png' %}" alt="Logo" />
+                <img src="./assets/img/connect_salud.png" alt="Logo" />
             </a>
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="{% static 'connectsalud/template/index.html' %}" class="nav-link px-2 link-dark">Inicio</a></li>
-                <li><a href="{% static 'connectsalud/template/planes.html' %}" class="nav-link px-2 link-dark">Planes</a></li>
-                <li><a href="{% static 'connectsalud/template/recetas.html' %}" class="nav-link px-2 link-dark">Recetas</a></li>
-                <li><a href="{% static 'connectsalud/template/contacto.html' %}" class="nav-link px-2 link-dark">Contacto</a></li>
+                <li><a href="index.html" class="nav-link px-2 link-dark">Inicio</a></li>
+                <li><a href="planes.html" class="nav-link px-2 link-dark">Planes</a></li>
+                <li><a href="recetas.html" class="nav-link px-2 link-dark">Recetas</a></li>
+                <li><a href="contacto.html" class="nav-link px-2 link-dark">Contacto</a></li>
             </ul>
             </header>
         </section>
@@ -105,7 +95,7 @@
                             <li>Comunicacion en Tiempo Real</li>
                             <li>Acceso al centro de Ayuda 24 Horas</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-warning" style="background-color: #FCEE7D">Contactanos</button>
+                        <button type="button" class="w-100 btn btn-lg btn-warning"style="background-color: #FCEE7D">Contactanos</button>
                         </div>
                     </div>
                     </div>
@@ -136,7 +126,7 @@
             </section>
             <!-- fin footer -->
         </main>
-        <script src="{% static 'connectsalud/js/bootstrap.bundle.min.js' %}"></script>
-        <script src="{% static 'connectsalud/js/subir.js' %}"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/subir.js"></script>
     </body>
 </html>

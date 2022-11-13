@@ -12,5 +12,6 @@ urlpatterns = [
     path('postres/', views.postres, name= 'postres'),
     path('recetas/', views.recetas, name= 'recetas'),
     path('sigin/', views.sigin, name= 'sigin'),
-    path('usuario/', views.usuario, name= 'usuario')
+    path('usuario/', views.usuario, name= 'usuario'),
+    path('planes/', views.planes, name= 'planes')
 ]

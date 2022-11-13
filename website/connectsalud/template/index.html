@@ -11,7 +11,7 @@
     <link href="{% static 'connectsalud/assets/img/connect_salud.ico' %}" rel="shortcut icon" type="image/ico"/>
 
     <link href="{% static 'connectsalud/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'connectsalud/salud/css/headers.css' %}" rel="stylesheet">
+    <link href="{% static 'connectsalud/css/headers.css' %}" rel="stylesheet">
     <link href="{% static 'connectsalud/css/features.css' %}" rel="stylesheet">
     <link href="{% static 'connectsalud/css/style.css' %}" rel="stylesheet" >
     <link href="{% static 'connectsalud/css/pricing.css' %}" rel="stylesheet">
@@ -26,11 +26,11 @@
       <section class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <a href="#" class="d-flex">
-            <img src="./assets/img/connect_salud.png" alt="Logo" />
+            <img src="{% static 'connectsalud/assets/img/connect_salud.png' %}" alt="Logo" />
           </a>
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="{% url 'inicio' %}" class="nav-link px-2 link-dark">Inicio</a></li>
-            <li><a href="url 'planes' " class="nav-link px-2 link-dark">Planes</a></li>
+            <li><a href="{% url 'planes' %} " class="nav-link px-2 link-dark">Planes</a></li>
             <li><a href="{% url 'recetas' %}" class="nav-link px-2 link-dark">Recetas</a></li>
             <li><a href="{% url 'contacto' %}" class="nav-link px-2 link-dark">Contacto</a></li>
           </ul>
@@ -253,7 +253,7 @@
         </section>
           <!-- fin footer -->
     </main>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/subir.js"></script>
+    <script src="{% static 'connectsalud/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'connectsalud/js/subir.js' %}"></script>
   </body>
 </html>
