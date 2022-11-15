@@ -1,0 +1,13 @@
+.env
+venv/*
+*.log
+*.pot
+*.pyc
+*/_pycache_/
+x_*
+static/*
+staticfiles/*
+media/*
+
+# vs code files
+.vscode

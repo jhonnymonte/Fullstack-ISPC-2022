@@ -1,7 +1,11 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.template import loader
-# Create your views here.
+from django.shortcuts import render, redirect
+from .models import Alta_turnos
+# import de login/register
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from .forms import CreateUserForm
+from django.contrib.auth import authenticate,login,logout
 """
 en codigo se crean las views para cada pagina del sitio y sus respectivas funcionalidades, conectandose al models para y enviando la informacion a los templates
 """
@@ -11,22 +15,28 @@ def inicio(request):
 
 def contacto(request):
     return render(request, "contacto.html")
-    
+
+@login_required(login_url='login')
 def bebidas(request):
     return render(request, "bebidas.html")
 
+@login_required(login_url='login')
 def almuerzos_cenas(request):
     return render(request, 'almuerzosCenas.html')
 
+@login_required(login_url='login')
 def desayunos(request):
     return render(request, "desayunos.html")
 
+@login_required(login_url='login')
 def guia_alimentacion(request):
     return render(request, "guiaalimentacion.html")
 
+@login_required(login_url='login')
 def postres(request):
     return render(request,"postres.html")
 
+@login_required(login_url='login')
 def recetas(request):
     return render(request,"recetas.html")
 
@@ -38,6 +48,7 @@ def usuario(request):
 
 def planes(request):
     return render(request,"planes.html")
+@login_required(login_url='login')
 
 def monitoreo_de_peso(request):
     return render(request,"monitoreodepeso.html")
@@ -45,11 +56,12 @@ def monitoreo_de_peso(request):
 def registro(request):
     return render(request, "registro.html")
 
+@login_required(login_url='login')
 def gestion_turnos(request):
     return render(request, "gestion_turnos.html")
 
 
-
+## CRUD turnos
 
 def home(request):
     turnos = Alta_turnos.objects.all()
@@ -100,3 +112,50 @@ def editar_turno(request):
     turnos.save()
 
     return redirect('/')
+
+##login y registro
+
+def registerPage(request):
+    if request.user.is_authenticated:
+        return redirect('inicio')
+    
+    else:
+        form = CreateUserForm
+        if request.method == 'POST':
+            form = CreateUserForm(request.POST)
+            if form.is_valid():
+                form.save()
+                user = form.cleaned_data.get('username')
+                messages.success(request,f'El usuario {user} fue creado correctamente')
+                return redirect('login')
+
+        context = {'form': form}
+        return render(request, 'register.html', context)
+
+def loginPage(request):
+    if request.user.is_authenticated:
+        return redirect('inicio')
+    else:
+
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+
+            user = authenticate(request, username = username, password = password )
+
+            if user is not None:
+                login(request, user)
+                return redirect('inicio')
+            
+            else:
+                messages.info(request, ' Usuario o contraseña incorrecto')
+                context = {}
+                return render(request, 'login.html', context)        
+
+        context = {}
+        return render(request, 'login.html', context)
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
