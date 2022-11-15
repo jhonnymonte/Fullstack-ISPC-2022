@@ -17,4 +17,9 @@ urlpatterns = [
     path('registro/', views.registro, name= 'registro'),
     path('monitoreodepeso/', views.monitoreo_de_peso, name= 'monitoreodepeso'),
     path('gestion_turnos/', views.gestion_turnos, name= 'gestion_turnos'),
+    ##views de login y registro
+    path('register/', views.registerPage, name= 'register'),#register forms django
+    path('login/', views.loginPage, name= 'login'),#register forms django
+    path('login/', views.logoutUser, name= 'logout')#logout
+
 ]
