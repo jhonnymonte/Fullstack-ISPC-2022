@@ -39,3 +39,59 @@ def usuario(request):
 def planes(request):
     return render(request,"planes.html")
 
+def monitoreo_de_peso(request):
+    return render(request,"monitoreodepeso.html")
+
+
+
+
+
+def home(request):
+    turnos = Alta_turnos.objects.all()
+
+
+    return render(request, "gestion_turnos.html",{"turnos":turnos})
+
+def registrar_turno(request):
+    dni = request.POST['txtDni']
+    nombre = request.POST['txtNombre']
+    apellido = request.POST['txtApellido']
+    telefono = request.POST['txtTelefono']
+    email = request.POST['txtEmail']
+    fecha = request.POST['txtFecha']
+    hora = request.POST['txtHora']
+    mensaje= request.POST['txtMensaje']
+
+    turno = Alta_turnos.objects.create(dni = dni, Nombre = nombre, apellido = apellido, telefono = telefono, email = email, fecha = fecha, hora = hora, mensaje = mensaje)
+    return redirect('/')
+
+def eliminar_turno(request, dni):
+    turnos = Alta_turnos.objects.get(dni=dni)
+    turnos.delete()
+    return redirect('/')
+
+def edicion_turno(request, dni):
+    turnos = Alta_turnos.objects.get(dni=dni)
+    return render(request, 'edicion_turnos.html', {"turnos":turnos})
+
+def editar_turno(request):
+    dni = request.POST['txtDni']
+    nombre = request.POST['txtNombre']
+    apellido = request.POST['txtApellido']
+    telefono = request.POST['txtTelefono']
+    email = request.POST['txtEmail']
+    fecha = request.POST['txtFecha']
+    hora = request.POST['txtHora']
+    mensaje= request.POST['txtMensaje']
+
+    turnos = Alta_turnos.objects.get(dni=dni)
+    turnos.Nombre = nombre
+    turnos.apellido = apellido
+    turnos.telefono = telefono
+    turnos.email = email
+    turnos.fecha = fecha
+    turnos.hora = hora
+    turnos.mensaje = mensaje
+    turnos.save()
+
+    return redirect('/')
