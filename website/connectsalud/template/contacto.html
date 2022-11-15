@@ -14,6 +14,13 @@
         <link href="{% static './assets/css/features.css' %}" rel="stylesheet">
         <link href="{% static ''./assets/css/style.css' %}" rel="stylesheet" >
         <link href="{% static './assets/css/pricing.css' %}" rel="stylesheet">
+        <link href="{% static '/connectsalud/assets/img/SUPER SALUDABLE.ico' %}" rel="shortcut icon" type="image/ico"/>
+        <link href="{% static 'connectsalud/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/headers.css' %}" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/features.css' %}" rel="stylesheet">
+        <link href="{% static 'connectsalud/css/style.css' %}" rel="stylesheet" >
+        <link href="{% static 'connectsalud/css/pricing.css' %}" rel="stylesheet">
+
     </head>
 
     <body>
@@ -23,6 +30,7 @@
         <section class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <a href="#" class="d-flex">
+
                 <img src="{% static './assets/img/SUPER SALUDABLE.png' %}" alt="Logo" />
             </a>
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -30,6 +38,13 @@
                 <li><a href="planes.html" class="nav-link px-2 link-dark">Planes</a></li>
                 <li><a href="recetas.html" class="nav-link px-2 link-dark">Recetas</a></li>
                 <li><a href="contacto.html" class="nav-link px-2 link-dark">Contacto</a></li>
+                <img src="{% static '/connectsalud/assets/img/SUPER SALUDABLE.png' %}" alt="Logo" />
+            </a>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="{% url 'inicio' %}" class="nav-link px-2 link-dark">Inicio</a></li>
+                <li><a href="url 'planes' " class="nav-link px-2 link-dark">Planes</a></li>
+                <li><a href="{% url 'recetas' %}" class="nav-link px-2 link-dark">Recetas</a></li>
+                <li><a href="{% url 'contacto' %}" class="nav-link px-2 link-dark">Contacto</a></li>
             </ul>
             </header>
         </section>
@@ -107,3 +122,4 @@
         <script src="./assets/js/subir.js"></script>
     </body>
 </html>
+

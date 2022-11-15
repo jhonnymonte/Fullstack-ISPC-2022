@@ -1,0 +1,39 @@
+#connect{
+    text-align: center;
+}
+#recetas{
+    text-align: center;
+   
+}
+
+.fotoAlimento{
+    width: 40%;
+    height: 40%;
+    border-radius: 10%;
+}
+.procedimiento{
+    margin: 20px;
+    
+}
+#box, #botonIniciarSesion, #botonRegistrar{
+    opacity: 60%;
+    
+}
+
+#carouselExampleControls{
+    width: flex;
+    height: flex;
+    padding: 15px;
+    text-align: center;
+}
+#tiposDeRecetas{
+    display: flex;
+    margin-right: 5%;
+    padding: 10%;
+    justify-content:center;
+}
+.card{
+    text-align: center;
+    margin: 20px;
+    border-color: #FCEE7D;
+}
