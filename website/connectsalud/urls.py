@@ -18,6 +18,6 @@ urlpatterns = [
     ##views de login y registro
     path('register/', views.registerPage, name= 'register'),#register forms django
     path('login/', views.loginPage, name= 'login'),#register forms django
-    path('login/', views.logoutUser, name= 'logout')#logout
+    path('logout/', views.logoutUser, name= 'logout')#logout
 
 ]
