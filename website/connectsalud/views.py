@@ -42,6 +42,11 @@ def planes(request):
 def monitoreo_de_peso(request):
     return render(request,"monitoreodepeso.html")
 
+def registro(request):
+    return render(request, "registro.html")
+
+def gestion_turnos(request):
+    return render(request, "gestion_turnos.html")
 
 
 
