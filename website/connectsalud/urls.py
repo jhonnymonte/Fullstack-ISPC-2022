@@ -11,10 +11,8 @@ urlpatterns = [
     path('guiaalimentacion/', views.guia_alimentacion, name= 'alimentacion'),
     path('postres/', views.postres, name= 'postres'),
     path('recetas/', views.recetas, name= 'recetas'),
-    path('sigin/', views.sigin, name= 'sigin'),
     path('usuario/', views.usuario, name= 'usuario'),
     path('planes/', views.planes, name= 'planes'),
-    path('registro/', views.registro, name= 'registro'),
     path('monitoreodepeso/', views.monitoreo_de_peso, name= 'monitoreodepeso'),
     path('gestion_turnos/', views.gestion_turnos, name= 'gestion_turnos'),
     ##views de login y registro

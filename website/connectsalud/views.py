@@ -40,9 +40,6 @@ def postres(request):
 def recetas(request):
     return render(request,"recetas.html")
 
-def sigin(request):
-    return render(request,"sigin.html")
-
 def usuario(request):
     return render(request,"usuario.html")
 
@@ -52,9 +49,6 @@ def planes(request):
 
 def monitoreo_de_peso(request):
     return render(request,"monitoreodepeso.html")
-
-def registro(request):
-    return render(request, "registro.html")
 
 @login_required(login_url='login')
 def gestion_turnos(request):
