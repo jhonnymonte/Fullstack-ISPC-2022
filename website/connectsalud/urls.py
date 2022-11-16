@@ -15,6 +15,10 @@ urlpatterns = [
     path('planes/', views.planes, name= 'planes'),
     path('monitoreodepeso/', views.monitoreo_de_peso, name= 'monitoreodepeso'),
     path('gestion_turnos/', views.gestion_turnos, name= 'gestion_turnos'),
+    path('gestion_turnos/registrar_turno/', views.registrar_turno , name='registrar_turno'),
+    path('edicionTurno/<dni>', views.edicion_turno, name = 'edicion_turno'),
+    path('editarTurno/', views.editar_turno, name = 'editar_turno'),
+    path('eliminarTurno/<dni>', views.eliminar_turno, name= 'eliminar turno'),
     ##views de login y registro
     path('register/', views.registerPage, name= 'register'),#register forms django
     path('login/', views.loginPage, name= 'login'),#register forms django

@@ -50,7 +50,7 @@ def planes(request):
 def monitoreo_de_peso(request):
     return render(request,"monitoreodepeso.html")
 
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def gestion_turnos(request):
     return render(request, "gestion_turnos.html")
 
@@ -62,7 +62,8 @@ def home(request):
 
 
     return render(request, "gestion_turnos.html",{"turnos":turnos})
-
+    
+#@login_required(login_url='login')
 def registrar_turno(request):
     dni = request.POST['txtDni']
     nombre = request.POST['txtNombre']
