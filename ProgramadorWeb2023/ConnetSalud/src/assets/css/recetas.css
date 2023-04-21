@@ -1,0 +1,58 @@
+#connect{
+    text-align: center;
+}
+#recetas{
+    text-align: center;
+   
+}
+
+.fotoAlimento{
+    width: 40%;
+    height: 40%;
+    border-radius: 10%;
+}
+.procedimiento{
+    margin: 20px;
+    
+}
+#box, #botonIniciarSesion, #botonRegistrar{
+    opacity: 60%;
+    
+}
+
+#carouselExampleControls{
+    width: flex;
+    height: flex;
+    padding: 15px;
+    text-align: center;
+}
+#tiposDeRecetas{
+    display: flex;
+    padding: 10%;
+    justify-content:center;
+}
+.card{
+    text-align: center;
+    margin: 20px;
+    border-color: #FCEE7D;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+    content: '>';
+    font-size: 55px;
+    color: black;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: black;
+}
