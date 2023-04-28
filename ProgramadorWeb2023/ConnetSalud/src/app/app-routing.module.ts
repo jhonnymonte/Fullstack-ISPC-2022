@@ -9,6 +9,8 @@ import {
   RecetasComponent,
   LoginComponent,
   RegisterComponent,
+  CarritoComponent
+  
 } from "./components/index.paginas"
 
 const routes: Routes = [
@@ -18,7 +20,8 @@ const routes: Routes = [
     { path: 'recetas', component: RecetasComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
+    { path: '**', pathMatch: 'full', redirectTo: 'inicio' },
+    { path: 'carrito', component: CarritoComponent}
 ];
 
 
