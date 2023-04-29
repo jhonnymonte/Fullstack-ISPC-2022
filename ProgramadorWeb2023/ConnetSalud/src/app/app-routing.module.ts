@@ -9,6 +9,7 @@ import {
   RecetasComponent,
   LoginComponent,
   RegisterComponent,
+  MonitoreodepesoComponent,
 } from "./components/index.paginas"
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'recetas', component: RecetasComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
+    { path: 'monitoreodepeso', component: MonitoreodepesoComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
