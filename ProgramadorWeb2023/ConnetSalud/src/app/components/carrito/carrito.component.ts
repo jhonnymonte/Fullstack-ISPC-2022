@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.css']
 })
-export class CarritoComponent implements OnInit {
+export class CarritoComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

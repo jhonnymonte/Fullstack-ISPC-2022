@@ -26,7 +26,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     LoginComponent,
     RegisterComponent,
     MonitoreodepesoComponent,
-    CarritoComponent
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
