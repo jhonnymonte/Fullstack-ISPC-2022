@@ -9,6 +9,9 @@ import {
   RecetasComponent,
   LoginComponent,
   RegisterComponent,
+  CarritoComponent,
+  MonitoreodepesoComponent,
+  
 } from "./components/index.paginas"
 
 const routes: Routes = [
@@ -18,7 +21,10 @@ const routes: Routes = [
     { path: 'recetas', component: RecetasComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
+    { path: 'monitoreodepeso', component: MonitoreodepesoComponent },
+    { path: 'carrito', component: CarritoComponent},
+    { path: '**', pathMatch: 'full', redirectTo: 'inicio' },
+  
 ];
 
 
