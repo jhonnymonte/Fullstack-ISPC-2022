@@ -13,7 +13,7 @@
             <div class="col-md-3 text-end">
             <a routerLink='login'  class="h-50 p-3 text-black rounded-3" style="background-color: #FCEE7D; text-decoration: none;" aria-current="page">Iniciar Sesion</a>
             <a routerLink='register' class="h-50 p-3 text-black rounded-3" style="background-color: #FCEE7D; margin-left: 5px; text-decoration: none;" aria-current="page">Registrate</a>
-            <a routerLink='login' class="h-50 p-3 text-black rounded-3" style="background-color: #FCEE7D; margin-left: 5px; text-decoration: none;" aria-current="page">Cerrar Sesion</a>
+            <a (click)="logout()" class="h-50 p-3 text-black rounded-3" style="background-color: #FCEE7D; margin-left: 5px; text-decoration: none; cursor:pointer" aria-current="page">Cerrar Sesion</a>
             </div>
         </header>
     </section>

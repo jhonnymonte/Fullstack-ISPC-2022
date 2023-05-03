@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { app_routing } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,11 @@ import { RecetasComponent } from './components/recetas/recetas.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreodepeso.component';
+import { AuthService } from './components/services/auth.service';
+import { AuthGuard } from './components/guard/auth.guard';
+import { GuiadealimentacionComponent } from './components/guiadealimentacion/guiadealimentacion.component';
+import { TurnosComponent } from './components/turnos/turnos.component';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +31,18 @@ import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreo
     RecetasComponent,
     LoginComponent,
     RegisterComponent,
-    MonitoreodepesoComponent
+    MonitoreodepesoComponent,
+    GuiadealimentacionComponent,
+    TurnosComponent,
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
