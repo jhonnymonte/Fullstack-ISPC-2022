@@ -9,11 +9,10 @@ import {
   RecetasComponent,
   LoginComponent,
   RegisterComponent,
+  MonitoreodepesoComponent,
   GuiadealimentacionComponent,
   TurnosComponent,
   CarritoComponent,
-  MonitoreodepesoComponent,
-  
 } from "./components/index.paginas"
 
 

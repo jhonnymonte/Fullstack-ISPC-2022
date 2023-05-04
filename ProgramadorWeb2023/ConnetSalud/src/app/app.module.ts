@@ -15,6 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreodepeso.component';
 import { AuthGuard } from './components/guard/auth.guard';
+import {CarritoComponent} from './components/carrito/carrito.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { AuthGuard } from './components/guard/auth.guard';
     RecetasComponent,
     LoginComponent,
     RegisterComponent,
-    MonitoreodepesoComponent
+    MonitoreodepesoComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
