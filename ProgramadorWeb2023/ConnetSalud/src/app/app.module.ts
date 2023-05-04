@@ -14,11 +14,6 @@ import { RecetasComponent } from './components/recetas/recetas.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreodepeso.component';
-import { AuthService } from './components/services/auth.service';
-import { AuthGuard } from './components/guard/auth.guard';
-import { GuiadealimentacionComponent } from './components/guiadealimentacion/guiadealimentacion.component';
-import { TurnosComponent } from './components/turnos/turnos.component';
-
 
 @NgModule({
   declarations: [
@@ -31,9 +26,7 @@ import { TurnosComponent } from './components/turnos/turnos.component';
     RecetasComponent,
     LoginComponent,
     RegisterComponent,
-    MonitoreodepesoComponent,
-    GuiadealimentacionComponent,
-    TurnosComponent,
+    MonitoreodepesoComponent
   ],
   imports: [
     BrowserModule,
