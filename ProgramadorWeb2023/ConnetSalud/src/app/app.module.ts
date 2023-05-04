@@ -14,6 +14,8 @@ import { RecetasComponent } from './components/recetas/recetas.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreodepeso.component';
+import {CarritoComponent} from './components/carrito/carrito.component'
+import { AuthGuard } from './components/guard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreo
     RecetasComponent,
     LoginComponent,
     RegisterComponent,
-    MonitoreodepesoComponent
+    MonitoreodepesoComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
