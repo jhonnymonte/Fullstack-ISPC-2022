@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { FormGroup, FormControl, Validators, FormControlName } from '@angular/forms';
 import { first } from 'rxjs/operators';
+import { UrlSerializer } from '@angular/router';
 
 
 
@@ -28,6 +29,7 @@ export class RegisterComponent implements OnInit {
     return this.myform.controls;
   }
 
+
   registerUser(){
     console.log(this.myform.value);
     this.authService.registerUser(this.myform.value)
@@ -35,7 +37,7 @@ export class RegisterComponent implements OnInit {
     .subscribe(
       data => {
         console.log(data);
-        alert('El usuario ha sido creado');
+        alert('El usuario ' + data.user.username + ' ha sido creado');
       },
       error => {
         console.log(error);
