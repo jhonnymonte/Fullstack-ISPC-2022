@@ -1,7 +1,7 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
         <!-- Tabs Titles -->
-  
+
         <!-- Icon -->
         <div class="fadeIn first">
             <img src="./assets/img/connect_salud.png" id="icon" alt="User Icon" />
@@ -9,13 +9,13 @@
         </div>
     
         <!-- Login Form -->
-    <form>
-        <input  type="text" id="login" class="fadeIn second" name="login" placeholder="Ingrese Usuario">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Ingrese password">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Repetir password">
-        <input type="submit" class="fadeIn fourth" value="Aceptar">
+    <form [formGroup]="myform" (ngSubmit)="registerUser(); myform.valid?myform.reset(): null">
+        <input formControlName="username"  type="text" id="login" class="fadeIn first" name="username" placeholder="Ingrese Usuario">
+        <input formControlName="password" type="text" id="password" class="fadeIn second" name="password" placeholder="Ingrese password">
+        <input formControlName="email" type="text" id="email" class="fadeIn third" name="email" placeholder="Email">
+        <button type="submit" class="btn btn-warning btn-block">Registrar</button>
     </form>
-  
+
     <!-- Remind Passowrd -->
         <div id="formFooter">
             <a class="underlineHover" routerLink="/login">Volver</a>
