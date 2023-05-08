@@ -10,7 +10,7 @@ cd ProgramadorWeb2023/BackEnd/ApiRegister
 source env/bin/activate # En Windows usa `env\Scripts\activate`
 
 - Iniciar el servidor de desarrollo de Django:
-python manage.py runserver
+`python manage.py runserver`
 
 ## Uso
  - Acceder al backend en `http://127.0.0.1:8000`

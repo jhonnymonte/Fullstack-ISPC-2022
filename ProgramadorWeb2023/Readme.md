@@ -5,9 +5,9 @@ Monitoreo de Peso, Información sobre hábitos saludables, recetas y suplementos
 
 ## Tecnologías utilizadas
 
-[Angular](https://github.com/angular/angular-cli)
-[django](https://www.djangoproject.com/)
-[Django Rest Framework](https://www.django-rest-framework.org/)
+- [Angular](https://github.com/angular/angular-cli)
+- [django](https://www.djangoproject.com/)
+- [Django Rest Framework](https://www.django-rest-framework.org/)
 
 ## Requisitos previos
 
@@ -19,10 +19,10 @@ Monitoreo de Peso, Información sobre hábitos saludables, recetas y suplementos
 - Clonar este repositorio.
 - Instalar las dependencias de Angular:
 cd ProgramadorWeb2023/ConnetSalud
-npm install
+`npm install`
 
 - Iniciar el servidor de desarrollo de Angular:
-ng serve --o
+`ng serve --o`
 
 ## Pasos para la correcta conexion del BackEnd en Django
 
@@ -33,7 +33,7 @@ cd ProgramadorWeb2023/BackEnd/ApiRegister
 source env/bin/activate # En Windows usa `env\Scripts\activate`
 
 - Iniciar el servidor de desarrollo de Django:
-python manage.py runserver
+`python manage.py runserver`
 
 ## Uso
  - Acceder al frontend en `http://localhost:4200/#/inicio`
@@ -41,4 +41,4 @@ python manage.py runserver
 
 
 ## Licencia
-Este proyecto está bajo la Licencia de Grupo28 del ISPC
+Este proyecto está bajo la Licencia de `Grupo28` del ISPC

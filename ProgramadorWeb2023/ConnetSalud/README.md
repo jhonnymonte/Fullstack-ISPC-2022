@@ -7,10 +7,10 @@ Este Proyecto ha sido generado en [Angular CLI](https://github.com/angular/angul
 - Clonar este repositorio.
 - Instalar las dependencias de Angular:
 cd ProgramadorWeb2023/ConnetSalud
-npm install
+`npm install`
 
 - Iniciar el servidor de desarrollo de Angular:
-ng serve --o
+`ng serve --o`
 
 ## Uso
 Acceder al frontend en `http://localhost:4200/#/inicio`
