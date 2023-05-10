@@ -1,17 +1,24 @@
+<div class="container-titulo">
+  <p>Resumen de compra</p>
+</div>
 <table>
   <thead>
     <tr>
-      <th>Imagen</th>
       <th>Nombre</th>
-      <th>Cantidad</th>
       <th>Precio</th>
+      <th>Modificar</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <p>aca tiene que ir el for con el producto del carrito</p>
+    <tr *ngFor="let product of products">
+      <td><img src="{{ product.image }}" alt="{{ product.name }}" width="50"></td>
+      <td>{{ product.price }}</td>
+      <td><button type="button" class="btn btn-danger" (click)="removeProduct(product)">X</button></td>
     </tr>
-    
-    
   </tbody>
 </table>
+<br>
+<div class="boton-finalizar">
+  <a href="Cardpage.html">
+<button type="button" class="btn btn-warning">Finalizar Compra</button></a></div>
+

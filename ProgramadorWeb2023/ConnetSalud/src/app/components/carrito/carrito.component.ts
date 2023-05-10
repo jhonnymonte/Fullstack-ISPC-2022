@@ -1,11 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.css']
 })
-export class CarritoComponent {
+export class CarritoComponent implements OnInit {
 
+  products: any[];
+
+  constructor(@Inject(CartService) private cartService: CartService) { }
+
+  ngOnInit() {
+    this.products = this.cartService.getProducts();
+  }
+  removeProduct(product: any) {
+    this.cartService.removeProduct(product);
+  }
 
 }
+
