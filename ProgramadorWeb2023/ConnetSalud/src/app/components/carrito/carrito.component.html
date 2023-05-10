@@ -5,7 +5,6 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Cantidad</th>
       <th>Precio</th>
       <th>Modificar</th>
     </tr>
@@ -13,10 +12,8 @@
   <tbody>
     <tr *ngFor="let product of products">
       <td><img src="{{ product.image }}" alt="{{ product.name }}" width="50"></td>
-      <td>{{ product.quantity }}</td>
       <td>{{ product.price }}</td>
       <td><button type="button" class="btn btn-danger" (click)="removeProduct(product)">X</button></td>
-      
     </tr>
   </tbody>
 </table>
