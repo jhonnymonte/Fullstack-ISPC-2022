@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { FormGroup, FormControl, Validators, FormControlName } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +13,7 @@ export class RegisterComponent implements OnInit {
   
   myform: FormGroup;
 
-  constructor( private authService: AuthService ) {}
+  constructor( private authService: AuthService, private router: Router ) {}
 
   ngOnInit(): void {
     this.myform = new FormGroup({
@@ -35,10 +34,13 @@ export class RegisterComponent implements OnInit {
     .subscribe(
       data => {
         console.log(data);
-        alert('El usuario ha sido creado');
+        alert('El usuario ' + data.username + ' ha sido creado');
+        this.router.navigate(['/login']);
       },
       error => {
         console.log(error);
+        alert('Este nombre de usuario ya ha sido creado');
+        window.location.reload();
       }
     )
   }
