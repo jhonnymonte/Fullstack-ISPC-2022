@@ -1,49 +1,26 @@
 <section class="container">
-    <div id="beneficios" class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-        <span class="fs-4">Turnos</span>
-        </a>
-    </div>
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal">Reserva de Turno</h1>
+    <h1 class="display-4 fw-normal">Reserva de Citas</h1>
     </div>
     <div class="row">
-        <div class="col-md-8">
-            <div class="form-group">
-                <label for="inputDNI" class="form-label">DNI</label>
-                <input type="number" class="form-control" id="inputDNI">
-            </div>
-            <form class="row g-3">
-                <div class="col-md-6">
-                    <label for="inputName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputName">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputLastName" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="inputLastName">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPhone" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="inputPhone">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputEmail" class="form-label">Correo</label>
-                    <input type="email" class="form-control" id="inputEmail">
-                </div>
-                <div class="form-group">
-                    <label for="fecha">Fecha</label>
-                    <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Fecha">
-                </div>
-                <div class="form-group">
-                    <label for="hora">Hora</label>
-                    <input type="time" class="form-control" id="hora" name="hora" placeholder="Hora">
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-warning">Enviar</button>
-            </form>
-        </div>
+    <div class="col-md-8">
+    <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off">
+    <table class="table">
+    <tr><td>DNI</td><td><input type="number" class="form- control" formControlName="dni"></td></tr>
+    <tr><td>Nombre</td><td><input type="text" class="form-control" formControlName="nombre"></td></tr>
+    <tr><td>Apellido</td><td><input type="text" class="form-control" formControlName="apellido"></td></tr>
+    <tr><td>Telefono</td><td><input type="text" class="form-control" formControlName="telefono"></td></tr>
+    <tr><td>Correo</td><td><input type="text" class="form-control" formControlName="correo"></td></tr>
+    <tr><td>Fecha</td><td><input type="date" class="form- control" formControlName="fecha"></td></tr>
+    <tr><td>Hora</td><td><input type="time" class="form- control" formControlName="hora"></td></tr>
+    <tr><td>Mensaje</td><td><input type="text" class="form-control" formControlName="mensaje"></td></tr>
+    <tr><td colspan="2"><button type="submit" class="btn btn-primary">Reservar</button></td></tr>
+    </table>
+    </form>
     </div>
-</section>
+    <div class="container pricing-header p-3 pb-md-4 mx-auto text- center">
+    <button type="button" routerLink='/list-citas' class="btn btn-success">Editar Cita</button>
+    </div>
+    </div>
+    </section>
+    
