@@ -29,8 +29,6 @@ Proyecto Creado con FrontEnd en [Angular](https://angular.io/) y BackEnd en [Dja
 
 - Sanchez, Samira
 
-- Molina, Gonzalo
-
 - Mingorance Pico, Desirée
 
 ## Licencia
