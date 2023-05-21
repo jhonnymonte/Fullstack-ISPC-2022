@@ -1,0 +1,37 @@
+<section class="container-lg">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Lista de Citas</h1>
+    </div>
+    <table class="table">
+    <thead>
+    <th>DNI</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Telefono</th>
+    <th>Correo</th>
+    <th>Fecha</th>
+    <th>Hora</th>
+    <th>Mensaje</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+    <td>{{user.dni}}</td>
+    <td>{{user.nombre}}</td>
+    <td>{{user.apellido}}</td>
+    <td>{{user.telefono}}</td>
+    <td>{{user.correo}}</td>
+    <td>{{user.fecha}}</td>
+    <td>{{user.hora}}</td>
+    <td>{{user.mensaje}}</td>
+    <td><button (click)="deleteCitas(user.id_paciente)"
+    class="btn btn-danger">Borrar</button></td>
+    <td><button [routerLink]="['/edit/', user.id_paciente]"
+    class="btn btn-success">Editar</button></td>
+    </tr>
+    </tbody>
+    </table>
+    <div class="container pricing-header p-3 pb-md-4 mx-auto textcenter">
+    <button tipe="button" routerLink='/turnos' class="btn btnsuccess">Reservar Cita</button>
+    </div>
+    </section>
+    
