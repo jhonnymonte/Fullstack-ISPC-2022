@@ -17,6 +17,8 @@ import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreo
 import { AuthGuard } from './components/guard/auth.guard';
 import {CarritoComponent} from './components/carrito/carrito.component';
 import { ListCitasComponent } from './components/list-citas/list-citas.component';
+import { EditCitasComponent } from './components/edit-citas/edit-citas.component';
+
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { ListCitasComponent } from './components/list-citas/list-citas.component
     MonitoreodepesoComponent,
     CarritoComponent,
     ListCitasComponent,
+    EditCitasComponent,
   ],
   imports: [
     BrowserModule,

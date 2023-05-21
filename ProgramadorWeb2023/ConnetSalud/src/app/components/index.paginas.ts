@@ -9,4 +9,6 @@ export {GuiadealimentacionComponent} from "./guiadealimentacion/guiadealimentaci
 export {TurnosComponent} from "./turnos/turnos.component";
 export {CarritoComponent} from "./carrito/carrito.component";
 export {ListCitasComponent} from "./list-citas/list-citas.component";
+export {EditCitasComponent} from "./edit-citas/edit-citas.component";
+
 
