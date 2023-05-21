@@ -13,6 +13,7 @@ import {
   GuiadealimentacionComponent,
   TurnosComponent,
   CarritoComponent,
+  ListCitasComponent,
 } from "./components/index.paginas"
 
 
@@ -28,6 +29,7 @@ const routes: Routes = [
     { path: 'guiadealimentacion', component: GuiadealimentacionComponent, canActivate:[AuthGuard]},
     { path: 'turnos', component: TurnosComponent, canActivate:[AuthGuard]},
     { path: 'carrito', component: CarritoComponent},
+    { path: 'list-citas', component: ListCitasComponent, canActivate:[AuthGuard]},
     { path: '**', pathMatch: 'full', redirectTo: 'inicio' },
 ];
 
