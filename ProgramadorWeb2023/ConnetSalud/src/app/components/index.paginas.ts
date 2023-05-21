@@ -8,4 +8,5 @@ export {MonitoreodepesoComponent} from "./monitoreodepeso/monitoreodepeso.compon
 export {GuiadealimentacionComponent} from "./guiadealimentacion/guiadealimentacion.component";
 export {TurnosComponent} from "./turnos/turnos.component";
 export {CarritoComponent} from "./carrito/carrito.component";
+export {EditCitasComponent} from "./edit-citas/edit-citas.component";
 

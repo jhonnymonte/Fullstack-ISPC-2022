@@ -13,6 +13,7 @@ import {
   GuiadealimentacionComponent,
   TurnosComponent,
   CarritoComponent,
+  EditCitasComponent,
 } from "./components/index.paginas"
 
 
@@ -29,6 +30,8 @@ const routes: Routes = [
     { path: 'turnos', component: TurnosComponent, canActivate:[AuthGuard]},
     { path: 'carrito', component: CarritoComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'inicio' },
+    { path: 'edit-citas', component: EditCitasComponent, canActivate:[AuthGuard]},
+{ path: 'edit/:id_paciente', component:EditCitasComponent, canActivate:[AuthGuard]},
 ];
 
 export const app_routing = RouterModule.forRoot(routes, { useHash:true });
