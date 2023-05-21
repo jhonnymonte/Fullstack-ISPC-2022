@@ -1,0 +1,24 @@
+<section class="container">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Editar Reserva de Citas</h1>
+    </div>
+    <div class="row">
+    <div class="col-md-8">
+    <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)"
+    autocomplete="off">
+    <table class="table">
+    <tr><td>DNI</td><td><input type="number" class="formcontrol" formControlName="dni"></td></tr>
+    <tr><td>Nombre</td><td><input type="text" class="formcontrol" formControlName="nombre"></td></tr>
+    <tr><td>Apellido</td><td><input type="text" class="formcontrol" formControlName="apellido"></td></tr>
+    <tr><td>Telefono</td><td><input type="text" class="formcontrol" formControlName="telefono"></td></tr>
+    <tr><td>Correo</td><td><input type="text" class="formcontrol" formControlName="correo"></td></tr>
+    <tr><td>Fecha</td><td><input type="date" class="formcontrol" formControlName="fecha"></td></tr>
+    <tr><td>Hora</td><td><input type="time" class="formcontrol" formControlName="hora"></td></tr>
+    <tr><td>Mensaje</td><td><input type="text" class="formcontrol" formControlName="mensaje"></td></tr>
+    <tr><td colspan="2" class="text-center"><button
+    type="submit" class="btn btn-warning" >Editar</button></td></tr>
+    </table>
+    </form>
+    </div>
+    </div>
+    </section>
