@@ -1,8 +1,14 @@
+.container-titulo{
+  text-align: center;
+  font-size: 30px;
+}
 table {
-  width: 100%;
+  width: 45%;
   border-collapse: collapse;
   border: 1px solid #ccc;
   font-size: 16px;
+  margin: auto;
+  text-align: center;
 }
 
 thead {
@@ -24,4 +30,7 @@ tr:hover {
 
 tr.selected {
   background-color: #ffe0b2;
+}
+.boton-finalizar{
+  text-align: center;
 }

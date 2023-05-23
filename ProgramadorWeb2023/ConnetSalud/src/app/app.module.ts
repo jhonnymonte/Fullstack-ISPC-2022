@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { app_routing } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +14,13 @@ import { RecetasComponent } from './components/recetas/recetas.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreodepeso.component';
-import { CarritoComponent } from './components/carrito/carrito.component';
+import { AuthGuard } from './components/guard/auth.guard';
+import {CarritoComponent} from './components/carrito/carrito.component';
+import { ListCitasComponent } from './components/list-citas/list-citas.component';
+import { EditCitasComponent } from './components/edit-citas/edit-citas.component';
+import { TurnosComponent } from './components/turnos/turnos.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,12 +35,18 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     RegisterComponent,
     MonitoreodepesoComponent,
     CarritoComponent,
+    ListCitasComponent,
+    EditCitasComponent,
+    TurnosComponent,
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
