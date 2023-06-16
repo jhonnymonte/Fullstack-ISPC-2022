@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 @Component({
@@ -18,8 +13,8 @@ export class TurnosComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private dataService: DataService,
-    private route: Router
-  ) {
+    private route: Router) 
+    {
     this.angForm = this.fb.group({
       dni: ['', Validators.required],
       nombre: ['', Validators.required],

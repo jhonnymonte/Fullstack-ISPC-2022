@@ -19,14 +19,14 @@ export class ListCitasComponent implements OnInit {
   deleteCitas(id_paciente:any){
     console.log(id_paciente);
     this.dataservice.delCitas(id_paciente).subscribe(()=>{
-    this.fetchUser();
-  })
+      this.fetchUser();
+    })
   }
   
   fetchUser(){
     this.dataservice.listCitas().subscribe((data)=> {
-    this.users=data;
-    console.log(this.users);
-  });
+      this.users=data;
+      console.log(this.users);
+    });
   }
 }
