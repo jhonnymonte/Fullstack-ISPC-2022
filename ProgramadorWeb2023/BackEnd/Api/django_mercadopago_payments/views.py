@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 # %% reafactor para django
 from rest_framework.views import APIView
 from django.http import JsonResponse
+from rest_framework.response import Response
 
 
 # Importa el módulo de mercadopago
@@ -18,7 +19,7 @@ sdk = mercadopago.SDK(TEST_ACCESS_TOKEN)
 
 
 class CreatePaymentAPIView(APIView):
-    def post(self, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         # Crea los datos de preferencia del pago
         preference_data = {
             "back_urls": {
@@ -28,7 +29,7 @@ class CreatePaymentAPIView(APIView):
                 {
                     "title": "Mi plan de salud",
                     "quantity": 1,
-                    "unit_price": 1000, # esto hay que conectarlo al front para que tome el valor de ahi para cualquiera de los 3 precios
+                    "unit_price": 1000,  # esto hay que conectarlo al front para que tome el valor de ahi para cualquiera de los 3 precios
                     "currency_id": "ARS",
                 }
             ],
@@ -41,4 +42,4 @@ class CreatePaymentAPIView(APIView):
         preference_url = preference["sandbox_init_point"]
 
         # Retorna la URL de la preferencia de pago
-        return JsonResponse({"payment_url": preference_url})
+        return Response({"payment_url": preference_url})
