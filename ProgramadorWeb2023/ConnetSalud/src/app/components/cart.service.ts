@@ -22,6 +22,7 @@ export class CartService {
     if (index !== -1) {
       this.products.splice(index, 1);
     }
+    
   }
 
 }
