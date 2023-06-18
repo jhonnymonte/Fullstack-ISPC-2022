@@ -1,24 +1,61 @@
-<div class="container-titulo">
-  <p>Resumen de compra</p>
-</div>
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Precio</th>
-      <th>Modificar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td><img src="{{ product.image }}" alt="{{ product.name }}" width="50"></td>
-      <td>{{ product.price }}</td>
-      <td><button type="button" class="btn btn-danger" (click)="removeProduct(product)"> <i class="fas fa-trash"></i></button></td>
-    </tr>
-  </tbody>
-</table>
-<br>
-<div class="boton-finalizar">
-  <a href="Cardpage.html">
-<button type="button" class="btn btn-warning">Finalizar Compra</button></a></div>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+</head>
+<body>
+  <div class="container-carrito">
+    <div class="container-titulo">
+        <h3>Resumen de compra</h3>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Modificar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td><img src="{{ product.image }}" alt="{{ product.name }}" width="50"></td>
+            <td>{{ product.price }}</td>
+            <td><button type="button" class="btn btn-danger" (click)="removeProduct(product)"> <i class="fas fa-trash"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+  <div class="container">
+    <h3> Datos de contacto</h3>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Numero</label>
+        <input type="text" class="form-control" id="numero" placeholder="Numero">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección de facturacion</label>
+        <input type="text" class="form-control" id="direccion" placeholder="Dirección">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Codigo postal</label>
+        <input type="text" class="form-control" id="codigo" placeholder="Codigo postal">
+      </div>
+      <br>
+      <div style="display: flex; justify-content: center;">
+    <button type="submit" class="btn btn" style="background-color: #FCEE7D; color: #000;">INICIAR COMPRA</button>
+  </div>
+  </form>
+  </div> 
+</body>
+</html>
