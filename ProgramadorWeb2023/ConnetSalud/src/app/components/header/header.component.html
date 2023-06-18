@@ -1,20 +1,25 @@
     <!-- Header -->
     <section class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <a routerLink="inicio" class="d-flex">
-            <img src="./assets/img/connect_salud.png" alt="Logo" />
-            </a>
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a routerLink="inicio" class="nav-link px-2 link-dark">Inicio</a></li>
-            <li><a routerLink="planes" class="nav-link px-2 link-dark">Planes</a></li>
-            <li><a routerLink="recetas" class="nav-link px-2 link-dark">Recetas</a></li>
-            <li><a routerLink="contacto" class="nav-link px-2 link-dark">Contacto</a></li>
-            </ul>
-            <div class="col-md-3 text-end">
-            <a routerLink='login'  class="h-50 p-3 text-black rounded-3" style="background-color: #FCEE7D; text-decoration: none;" aria-current="page">Iniciar Sesion</a>
-            <a routerLink='register' class="h-50 p-3 text-black rounded-3" style="background-color: #FCEE7D; margin-left: 5px; text-decoration: none;" aria-current="page">Registrate</a>
-            <a (click)="logout()" class="h-50 p-3 text-black rounded-3" style="background-color: #FCEE7D; margin-left: 5px; text-decoration: none; cursor:pointer" aria-current="page">Cerrar Sesion</a>
-            </div>
+        <header class="d-flex flex-wrap align-items-center justify-content-center justifycontent-md-between py-3 mb-4 border-bottom">
+        <a routerLink="inicio" class="d-flex">
+        <img src="./assets/img/connect_salud.png" alt="Logo" />
+        </a>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a routerLink="inicio" class="nav-link px-2 link-dark">Inicio</a></li>
+        <li><a routerLink="planes" class="nav-link px-2 link-dark">Planes</a></li>
+        <li><a routerLink="recetas" class="nav-link px-2 link-dark">Recetas</a></li>
+        <li><a routerLink="contacto" class="nav-link px-2 link-dark">Contacto</a></li>
+        </ul>
+        <div *ngIf="!isLoggedIn()" class="col-md-5 text-end">
+        <a routerLink='login' class="h-50 p-3 text-black rounded-3" style="backgroundcolor: #FCEE7D; text-decoration: none;" aria-current="page">Iniciar Sesion</a>
+        <a routerLink='register' class="h-50 p-3 text-black rounded-3"
+        style="background-color: #FCEE7D; margin-left: 5px; text-decoration: none;" ariacurrent="page">Registrate</a>
+        </div>
+        <div *ngIf="isLoggedIn()" class="col-md-3 ">
+        <a routerLink="perfil" class="h-50 p-3 text-black rounded-circle" ariacurrent="page"><img class="rounded-circle" src="./assets/img/user-profile.png" alt="Perfil"
+        style="background-color: #FCEE7D; display: inline-block; width: 60px;"></a>
+        <a (click)="logout()" class="h-50 p-3 text-black rounded-3" style="backgroundcolor: #FCEE7D; margin-left: 5px; text-decoration: none; cursor:pointer" ariacurrent="page">Cerrar Sesion</a>
+        </div>
         </header>
-    </section>
+        </section>
     <!-- End Header -->

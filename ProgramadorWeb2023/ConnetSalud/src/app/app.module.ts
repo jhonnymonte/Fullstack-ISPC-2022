@@ -19,8 +19,12 @@ import {CarritoComponent} from './components/carrito/carrito.component';
 import { ListCitasComponent } from './components/list-citas/list-citas.component';
 import { EditCitasComponent } from './components/edit-citas/edit-citas.component';
 import { TurnosComponent } from './components/turnos/turnos.component';
+<<<<<<< HEAD
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { EditUsersComponent } from './components/edit-users/edit-users.component';
+=======
+import { PerfilComponent } from './components/perfil/perfil.component';
+>>>>>>> e5679b6f46a2dea4ab8d79b6be69ed73dc6cdd87
 
 
 
@@ -40,8 +44,12 @@ import { EditUsersComponent } from './components/edit-users/edit-users.component
     ListCitasComponent,
     EditCitasComponent,
     TurnosComponent,
+<<<<<<< HEAD
     ListUsersComponent,
     EditUsersComponent,
+=======
+    PerfilComponent,
+>>>>>>> e5679b6f46a2dea4ab8d79b6be69ed73dc6cdd87
   ],
   imports: [
     BrowserModule,
