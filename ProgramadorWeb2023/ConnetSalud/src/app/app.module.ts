@@ -19,6 +19,7 @@ import {CarritoComponent} from './components/carrito/carrito.component';
 import { ListCitasComponent } from './components/list-citas/list-citas.component';
 import { EditCitasComponent } from './components/edit-citas/edit-citas.component';
 import { TurnosComponent } from './components/turnos/turnos.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 
@@ -38,6 +39,7 @@ import { TurnosComponent } from './components/turnos/turnos.component';
     ListCitasComponent,
     EditCitasComponent,
     TurnosComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

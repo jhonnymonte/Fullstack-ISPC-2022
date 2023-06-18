@@ -1,0 +1,38 @@
+<section class="container">
+    <h2>Perfil de Usuario</h2>
+    <div *ngIf="isLoading">
+    <p>Cargando perfil...</p>
+    </div>
+    <div *ngIf="!isLoading && profile">
+    <p><strong>Nombre de usuario:</strong> {{ profile.username }}</p>
+    <p><strong>Email:</strong> {{ profile.email }}</p>
+    <div *ngIf="updateSuccess" class="success-message">
+    Perfil actualizado correctamente.
+    </div>
+    <div *ngIf="updateError" class="error-message">
+    Ha ocurrido un error al actualizar el perfil.
+    </div>
+    <div>
+    <button type="button" (click)="updateProfile()">Editar perfil</button>
+    </div>
+    <div *ngIf="editing">
+    <!-- Formulario de edición de datos del usuario -->
+    <form (ngSubmit)="saveChanges()">
+    <label>
+    Nombre de usuario:
+    <input type="text" [(ngModel)]="profile.username" name="username">
+    </label>
+    <label>
+    Email:
+    <input type="email" [(ngModel)]="profile.email" name="email">
+    </label>
+    <button type="submit">Guardar cambios</button>
+    <button type="button" (click)="cancelEdit()">Cancelar</button>
+    </form>
+    </div>
+    </div>
+    <div *ngIf="!isLoading && !profile">
+    <p>No se ha encontrado información del perfil. Por favor, inicia sesión.</p>
+    </div>
+    </section>
+    
