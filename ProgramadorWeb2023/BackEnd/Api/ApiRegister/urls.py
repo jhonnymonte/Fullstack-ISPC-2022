@@ -19,7 +19,13 @@ from django.urls import path, include
 from django_mercadopago_payments.views import CreatePaymentAPIView
 
 urlpatterns = [
+<<<<<<< HEAD
     path("admin/", admin.site.urls),
     path("", include("accounts.urls")),
     path("createpayment/", CreatePaymentAPIView.as_view(), name="create_payment"),
+=======
+    path('admin/', admin.site.urls),
+    path('', include('accounts.urls')),
+    path('api/login/', include('rest_framework.urls')),
+>>>>>>> 62ebbdacb41cc231a5c7680a60d2615de47bcf64
 ]

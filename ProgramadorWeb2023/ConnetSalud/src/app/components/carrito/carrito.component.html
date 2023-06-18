@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -78,6 +79,31 @@
       <button type="submit" class="btn btn-primary">Pagar</button>
     </form>
   </div>
+=======
+<div class="container-titulo">
+  <p>Resumen de compra</p>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Modificar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td><img src="{{ product.image }}" alt="{{ product.name }}" width="50"></td>
+      <td>${{ product.price }}</td>
+      <td><button type="button" class="btn btn-danger" (click)="removeProduct(product)"> <i class="fas fa-trash"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<div class="boton-finalizar">
+  <a href="Cardpage.html">
+<button type="button" class="btn btn-warning">Finalizar Compra</button></a></div>
+>>>>>>> 62ebbdacb41cc231a5c7680a60d2615de47bcf64
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

@@ -28,13 +28,15 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser(){
+    const username = this.myform.value.username;
+
     console.log(this.myform.value);
     this.authService.registerUser(this.myform.value)
     .pipe(first())
     .subscribe(
       data => {
         console.log(data);
-        alert('El usuario ' + data.username + ' ha sido creado');
+        alert('El usuario ' + username + ' ha sido creado');
         this.router.navigate(['/login']);
       },
       error => {
