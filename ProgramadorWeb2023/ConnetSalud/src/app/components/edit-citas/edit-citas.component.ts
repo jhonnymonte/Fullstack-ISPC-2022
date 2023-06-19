@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data.service';
@@ -13,7 +13,7 @@ export class EditCitasComponent {
   angForm: FormGroup
   id_paciente: any;
   constructor(
-  private fb:FormBuilder,
+  @Inject(FormBuilder) private fb:FormBuilder,
   private dataService: DataService,
   private route: Router,
   private activateRouter: ActivatedRoute,)

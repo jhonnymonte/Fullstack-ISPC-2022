@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -16,7 +16,7 @@ export class TurnosComponent implements OnInit {
   angForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder,
+    @Inject(FormBuilder) private fb: FormBuilder,
     private dataService: DataService,
     private route: Router
   ) {
