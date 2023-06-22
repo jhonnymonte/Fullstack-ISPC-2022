@@ -11,6 +11,8 @@ export {CarritoComponent} from "./carrito/carrito.component";
 export {ListCitasComponent} from "./list-citas/list-citas.component";
 export {EditCitasComponent} from "./edit-citas/edit-citas.component";
 export {PerfilComponent} from "./perfil/perfil.component";
+export {ListUsersComponent} from "./list-users/list-users.component";
+export {EditUsersComponent} from "./edit-users/edit-users.component";
 
 
 

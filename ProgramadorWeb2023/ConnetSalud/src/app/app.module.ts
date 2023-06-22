@@ -23,6 +23,9 @@ import { DataService } from './components/services/data.service';
 import { CartService } from './components/services/cart.service';
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { EditUsersComponent } from './components/edit-users/edit-users.component';
+import { AuthService } from './components/services/auth.service';
+import {AuthStateService} from './components/services/auth-state.service'
+import { UserService } from './components/services/user.service';
 
 
 
@@ -57,7 +60,10 @@ import { EditUsersComponent } from './components/edit-users/edit-users.component
   providers: [
     AuthGuard,
     DataService,
-    CartService
+    CartService,
+    AuthService,
+    AuthStateService,
+    UserService,
   ],
   bootstrap: [AppComponent]
 })

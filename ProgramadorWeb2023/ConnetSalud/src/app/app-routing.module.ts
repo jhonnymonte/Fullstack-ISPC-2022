@@ -15,7 +15,8 @@ import {
   ListCitasComponent,
   EditCitasComponent,
   PerfilComponent,
-
+  ListUsersComponent,
+  EditUsersComponent,
 } from "./components/index.paginas"
 
 
@@ -35,6 +36,9 @@ const routes: Routes = [
     { path: 'edit-citas', component: EditCitasComponent, canActivate:[AuthGuard]},
     { path: 'edit/:id_paciente', component:EditCitasComponent, canActivate:[AuthGuard]},
     { path: 'perfil', component:PerfilComponent, canActivate:[AuthGuard]},
+    { path: 'list-users', component: ListUsersComponent, canActivate:[AuthGuard]},
+    { path: 'edit-users', component: EditUsersComponent, canActivate:[AuthGuard]},
+    { path: 'edit-users/:id', component:EditUsersComponent, canActivate:[AuthGuard]},
     { path: '**', pathMatch: 'full', redirectTo: 'inicio' },
 ];
 
