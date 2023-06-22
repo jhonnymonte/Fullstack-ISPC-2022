@@ -8,7 +8,7 @@ body {
 }
 .container {
   flex:  1 40%;
-  padding: 5px;
+  margin: 10px;
 }
 .container-titulo{
   text-align: center;

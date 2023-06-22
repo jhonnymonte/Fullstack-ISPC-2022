@@ -1,40 +1,10 @@
-<<<<<<< HEAD
-<div class="container-titulo">
-  <p>Resumen de compra</p>
-</div>
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Precio</th>
-      <th>Modificar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td><img src="{{ product.image }}" alt="{{ product.name }}" width="50"></td>
-      <td>${{ product.price }}</td>
-      <td><button type="button" class="btn btn-danger" (click)="removeProduct(product)"> <i class="fas fa-trash"></i></button></td>
-    </tr>
-  </tbody>
-</table>
-<br>
-<div class="boton-finalizar">
-  <a href="Cardpage.html">
-<button type="button" class="btn btn-warning">Finalizar Compra</button></a></div>
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Resumen de compra</h1>
+  </div>
+  <body class="container-lg">
     <div class="container-titulo">
-        <p>Resumen de compra</p>
+        
 
       </div>
       <table>
@@ -73,13 +43,13 @@
       </div>
       <div class="my-3">
             <div class="form-check">
-                <h1>Payments</h1>
+                <h1>Formas de Pago</h1>
               <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
-              <label class="form-check-label" for="credit">Credit card</label>
+              <label class="form-check-label" for="credit">Tarjeta de Credito</label>
             </div>
             <div class="form-check">
               <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
-              <label class="form-check-label" for="debit">Debit card</label>
+              <label class="form-check-label" for="debit">Tarjeta de  Debito</label>
             </div>
             <div class="form-check">
               <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
@@ -90,11 +60,5 @@
       <button type="submit" class="btn btn-primary">Pagar</button>
     </form>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
->>>>>>> desimingo
 
