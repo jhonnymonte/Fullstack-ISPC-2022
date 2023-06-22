@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { app_routing } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -19,9 +18,9 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { ListCitasComponent } from './components/list-citas/list-citas.component';
 import { EditCitasComponent } from './components/edit-citas/edit-citas.component';
 import { TurnosComponent } from './components/turnos/turnos.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 import { DataService } from './components/services/data.service';
 import { CartService } from './components/services/cart.service';
-
 
 
 
@@ -39,9 +38,10 @@ import { CartService } from './components/services/cart.service';
     MonitoreodepesoComponent,
     CarritoComponent,
     ListCitasComponent,
+    PerfilComponent,
     EditCitasComponent,
     TurnosComponent,
-  ],
+   ],
   imports: [
     BrowserModule,
     app_routing,
