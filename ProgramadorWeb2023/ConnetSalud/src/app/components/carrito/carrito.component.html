@@ -12,7 +12,7 @@
   <tbody>
     <tr *ngFor="let product of products">
       <td><img src="{{ product.image }}" alt="{{ product.name }}" width="50"></td>
-      <td>{{ product.price }}</td>
+      <td>${{ product.price }}</td>
       <td><button type="button" class="btn btn-danger" (click)="removeProduct(product)"> <i class="fas fa-trash"></i></button></td>
     </tr>
   </tbody>

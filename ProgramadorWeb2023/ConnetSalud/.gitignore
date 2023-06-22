@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+db.sqlite3
+env
+__pycache__
+.idea

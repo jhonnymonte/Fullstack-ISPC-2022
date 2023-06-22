@@ -15,10 +15,13 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MonitoreodepesoComponent } from './components/monitoreodepeso/monitoreodepeso.component';
 import { AuthGuard } from './components/guard/auth.guard';
-import {CarritoComponent} from './components/carrito/carrito.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 import { ListCitasComponent } from './components/list-citas/list-citas.component';
 import { EditCitasComponent } from './components/edit-citas/edit-citas.component';
 import { TurnosComponent } from './components/turnos/turnos.component';
+import { DataService } from './components/services/data.service';
+import { CartService } from './components/services/cart.service';
+
 
 
 
@@ -46,7 +49,11 @@ import { TurnosComponent } from './components/turnos/turnos.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [AuthGuard],
+  providers: [
+    AuthGuard,
+    DataService,
+    CartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
