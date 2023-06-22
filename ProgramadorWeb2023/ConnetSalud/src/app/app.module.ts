@@ -44,6 +44,8 @@ import { EditUsersComponent } from './components/edit-users/edit-users.component
     PerfilComponent,
     EditCitasComponent,
     TurnosComponent,
+    ListUsersComponent,
+    EditUsersComponent,
    ],
   imports: [
     BrowserModule,
