@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AuthService {
-
+  
   api_url: string = 'http://127.0.0.1:8000/';
   f: any;
 
@@ -38,5 +38,19 @@ export class AuthService {
   logout() {
     localStorage.removeItem('currentUser');
     this.router.navigate(['/login']);
+  }
+
+
+// Lista de Usuarios
+
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(this.api_url + 'api/listusers/').pipe(
+      map(response => response)
+    );
+  }
+
+  deleteUser(id: number): Observable<any> {
+    const url = `${this.api_url}api/listusers/${id}/`; 
+    return this.http.delete<any>(url);
   }
 }
