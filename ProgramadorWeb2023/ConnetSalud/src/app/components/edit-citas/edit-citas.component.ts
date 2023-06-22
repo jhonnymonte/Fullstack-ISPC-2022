@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data.service';
@@ -15,11 +15,11 @@ export class EditCitasComponent {
   id_paciente: any;
   
   constructor(
-    private fb:FormBuilder,
-    private dataService: DataService,
-    private route: Router,
-    private activateRouter: ActivatedRoute,)
-    {
+  private fb:FormBuilder,
+  private dataService: DataService,
+  private route: Router,
+  private activateRouter: ActivatedRoute,)
+  {
     this.angForm= this.fb.group({
       dni:['', Validators.required],
       nombre:['', Validators.required],

@@ -1,32 +1,32 @@
 <section class="container-lg">
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-    <h1 class="display-4 fw-normal">Lista de Usuarios</h1>
+        <h1 class="display-4 fw-normal">Lista de Usuarios</h1>
     </div>
     <table class="table">
-    <thead>
-    <th>Id</th>
-    <th>Nombre</th>
-    <th>Correo</th>
-    <th>Super</th>
-    <th>Staff</th>
-    <th>Fecha de Registro</th>
-    <th>Ultimo Inicio de Sesion</th>
-    </thead>
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Super</th>
+            <th>Staff</th>
+            <th>Fecha de Registro</th>
+            <th>Ultimo Inicio de Sesion</th>
+        </thead>
     <tbody>
-    <tr *ngFor="let user of users">
-    <td>{{user.id}}</td>
-    <td>{{user.username}}</td>
-    <td>{{user.email}}</td>
-    <td>{{user.is_superuser}}</td>
-    <td>{{user.is_staff}}</td>
-    <td>{{user.date_joined}}</td>
-    <td>{{user.last_login}}</td>
-    <td><button (click)="deleteUser(user.id)" class="btn btndanger">Borrar</button></td>
-    <td><button [routerLink]="['/edit-users/', user.id]" class="btn btnsuccess">Editar</button></td>
-    </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.is_superuser}}</td>
+            <td>{{user.is_staff}}</td>
+            <td>{{user.date_joined}}</td>
+            <td>{{user.last_login}}</td>
+            <td><button (click)="deleteUser(user.id)" class="btn btndanger">Borrar</button></td>
+            <td><button [routerLink]="['/edit-users/', user.id]" class="btn btnsuccess">Editar</button></td>
+        </tr>
     </tbody>
     </table>
     <div class="container pricing-header p-3 pb-md-4 mx-auto text-center">
-    <button tipe="button" routerLink='/inicio' class="btn btn-success">Salir</button>
+        <button tipe="button" routerLink='/inicio' class="btn btn-success">Salir</button>
     </div>
-    </section>
+</section>
