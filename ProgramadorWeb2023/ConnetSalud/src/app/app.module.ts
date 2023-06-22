@@ -21,6 +21,9 @@ import { TurnosComponent } from './components/turnos/turnos.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { DataService } from './components/services/data.service';
 import { CartService } from './components/services/cart.service';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+import { EditUsersComponent } from './components/edit-users/edit-users.component';
+
 
 
 
