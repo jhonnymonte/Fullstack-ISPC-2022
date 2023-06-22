@@ -18,6 +18,9 @@ export class CarritoComponent implements OnInit {
   removeProduct(product: any) {
     this.cartService.removeProduct(product);
   }
-
+  iniciarCompra() {
+    const url = 'http://127.0.0.1:8000/createpayment/';
+    window.location.href = url;
+  }
 }
 

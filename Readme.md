@@ -19,13 +19,9 @@ Proyecto Creado con FrontEnd en [Angular](https://angular.io/) y BackEnd en [Dja
 
 ## Miembros del Grupo28
 
-- Galeano, Micaela
-
 - Montenegro, Jonathan
 
 - Coronel, Ediberto
-
-- Reynoso, Adan
 
 - Sanchez, Samira
 

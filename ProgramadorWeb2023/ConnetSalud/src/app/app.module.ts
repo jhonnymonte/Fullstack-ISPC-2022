@@ -21,7 +21,8 @@ import { EditCitasComponent } from './components/edit-citas/edit-citas.component
 import { TurnosComponent } from './components/turnos/turnos.component';
 import { DataService } from './components/services/data.service';
 import { CartService } from './components/services/cart.service';
-
+import { ListUsersComponent } from './components/list-users/list-users.component';
+import { EditUsersComponent } from './components/edit-users/edit-users.component';
 
 
 
@@ -41,6 +42,8 @@ import { CartService } from './components/services/cart.service';
     ListCitasComponent,
     EditCitasComponent,
     TurnosComponent,
+    ListUsersComponent,
+    EditUsersComponent,
   ],
   imports: [
     BrowserModule,
